@@ -1,151 +1,131 @@
--- phpMyAdmin SQL Dump
--- version 4.1.4
--- http://www.phpmyadmin.net
---
--- Client :  127.0.0.1
--- Généré le :  Mar 04 Octobre 2016 à 10:55
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.4.24
+-- MySQL Workbench Forward Engineering
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema bddArtifact
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema bddArtifact
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `bddArtifact` DEFAULT CHARACTER SET utf8 ;
+USE `bddArtifact` ;
+
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Class`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Class` (
+  `codeClass` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`codeClass`))
+ENGINE = InnoDB;
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Base de données :  `bddartifact`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `appearance`
---
-
-CREATE TABLE IF NOT EXISTS `appearance` (
-  `idAppearance` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `pictureFileName` varchar(60) NOT NULL,
-  `idWeapon` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`idAppearance`),
-  KEY `idWeapon_idx` (`idWeapon`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `apprearance_has_color`
---
-
-CREATE TABLE IF NOT EXISTS `apprearance_has_color` (
-  `idAppearance` int(11) NOT NULL,
-  `codeColor` int(11) NOT NULL,
-  PRIMARY KEY (`idAppearance`,`codeColor`),
-  KEY `codeColor_idx` (`codeColor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `artifactweapon`
---
-
-CREATE TABLE IF NOT EXISTS `artifactweapon` (
-  `idWeapon` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `idSpecialisation` int(11) NOT NULL,
-  `story` longtext NOT NULL,
-  PRIMARY KEY (`idWeapon`),
-  KEY `idSpecialisation_idx` (`idSpecialisation`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `class`
---
-
-CREATE TABLE IF NOT EXISTS `class` (
-  `codeClass` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`codeClass`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `color`
---
-
-CREATE TABLE IF NOT EXISTS `color` (
-  `codeColor` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`codeColor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `specialisation`
---
-
-CREATE TABLE IF NOT EXISTS `specialisation` (
-  `idSpecialisation` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `codeClass` int(11) NOT NULL,
-  `codeType` int(11) NOT NULL,
-  PRIMARY KEY (`idSpecialisation`),
-  KEY `codeClass_idx` (`codeClass`),
-  KEY `type_idx` (`codeType`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `type`
---
-
-CREATE TABLE IF NOT EXISTS `type` (
-  `codeType` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Type`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Type` (
+  `codeType` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`codeType`),
-  UNIQUE KEY `codeType_UNIQUE` (`codeType`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  UNIQUE INDEX `codeType_UNIQUE` (`codeType` ASC))
+ENGINE = InnoDB;
 
---
--- Contraintes pour les tables exportées
---
 
---
--- Contraintes pour la table `appearance`
---
-ALTER TABLE `appearance`
-  ADD CONSTRAINT `idWeapon` FOREIGN KEY (`idWeapon`) REFERENCES `artifactweapon` (`idWeapon`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Specialisation`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Specialisation` (
+  `idSpecialisation` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `codeClass` INT NOT NULL,
+  `codeType` INT NOT NULL,
+  PRIMARY KEY (`idSpecialisation`),
+  INDEX `codeClass_idx` (`codeClass` ASC),
+  INDEX `type_idx` (`codeType` ASC),
+  CONSTRAINT `codeClass`
+    FOREIGN KEY (`codeClass`)
+    REFERENCES `bddArtifact`.`Class` (`codeClass`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `codeType`
+    FOREIGN KEY (`codeType`)
+    REFERENCES `bddArtifact`.`Type` (`codeType`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
---
--- Contraintes pour la table `apprearance_has_color`
---
-ALTER TABLE `apprearance_has_color`
-  ADD CONSTRAINT `codeColor` FOREIGN KEY (`codeColor`) REFERENCES `color` (`codeColor`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `idAppearance` FOREIGN KEY (`idAppearance`) REFERENCES `appearance` (`idAppearance`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Contraintes pour la table `artifactweapon`
---
-ALTER TABLE `artifactweapon`
-  ADD CONSTRAINT `idSpecialisation` FOREIGN KEY (`idSpecialisation`) REFERENCES `specialisation` (`idSpecialisation`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`ArtifactWeapon`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`ArtifactWeapon` (
+  `idWeapon` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `idSpecialisation` INT NOT NULL,
+  `story` LONGTEXT NOT NULL,
+  PRIMARY KEY (`idWeapon`),
+  INDEX `idSpecialisation_idx` (`idSpecialisation` ASC),
+  CONSTRAINT `idSpecialisation`
+    FOREIGN KEY (`idSpecialisation`)
+    REFERENCES `bddArtifact`.`Specialisation` (`idSpecialisation`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
---
--- Contraintes pour la table `specialisation`
---
-ALTER TABLE `specialisation`
-  ADD CONSTRAINT `codeClass` FOREIGN KEY (`codeClass`) REFERENCES `class` (`codeClass`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `codeType` FOREIGN KEY (`codeType`) REFERENCES `type` (`codeType`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Appearance`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Appearance` (
+  `idAppearance` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `pictureFileName` VARCHAR(100) NOT NULL,
+  `idWeapon` INT NOT NULL,
+  PRIMARY KEY (`idAppearance`),
+  INDEX `idWeapon_idx` (`idWeapon` ASC),
+  CONSTRAINT `idWeapon`
+    FOREIGN KEY (`idWeapon`)
+    REFERENCES `bddArtifact`.`ArtifactWeapon` (`idWeapon`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Color`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Color` (
+  `codeColor` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`codeColor`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `bddArtifact`.`Apprearance_Has_Color`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Apprearance_Has_Color` (
+  `idAppearance` INT NOT NULL,
+  `codeColor` INT NOT NULL,
+  PRIMARY KEY (`idAppearance`, `codeColor`),
+  INDEX `codeColor_idx` (`codeColor` ASC),
+  CONSTRAINT `idAppearance`
+    FOREIGN KEY (`idAppearance`)
+    REFERENCES `bddArtifact`.`Appearance` (`idAppearance`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `codeColor`
+    FOREIGN KEY (`codeColor`)
+    REFERENCES `bddArtifact`.`Color` (`codeColor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
