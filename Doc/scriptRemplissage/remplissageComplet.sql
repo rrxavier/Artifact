@@ -12,18 +12,18 @@ INSERT INTO `role`(`codeRole`, `name`) VALUES (2,"Tank");
 INSERT INTO `role`(`codeRole`, `name`) VALUES (3,"Healer");
 
 -- Remplissage des spécialisations
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Holy', 1, 3), (NULL, 'Protection', 1, 2), (NULL, 'Retribution', 1, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Arms', 2, 1), (NULL, 'Fury', 2, 1), (NULL, 'Protection', 2, 2);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Beast Mastery', 3, 3), (NULL, 'Marksmanship', 3, 1), (NULL, 'Survival', 3, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Assassination', 4, 1), (NULL, 'Outlaw', 4, 1), (NULL, 'Subtlety', 4, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Discipline', 5, 3), (NULL, 'Holy', 5, 3), (NULL, 'Shadow', 5, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Blood', 6, 2), (NULL, 'Frost', 6, 1), (NULL, 'Unholy', 6, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Elemental', 7, 1), (NULL, 'Enhancement', 7, 1), (NULL, 'Restoration', 7, 3);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Arcane', 8, 1), (NULL, 'Fire', 8, 1), (NULL, 'Frost', 8, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Affliction', 9, 1), (NULL, 'Demonology', 9, 1), (NULL, 'Destruction', 9, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Brewmaster', 10, 2), (NULL, 'Mistweaver', 10, 3), (NULL, 'Windwalker', 10, 1);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Balance', 11, 1), (NULL, 'Feral', 11, 1), (NULL, 'Guardian', 11, 2), (NULL, 'Restoration', 11, 3);
-INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeType`) VALUES (NULL, 'Havoc', 12, 1), (NULL, 'Vengeance', 12, 2);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Holy', 1, 3), (NULL, 'Protection', 1, 2), (NULL, 'Retribution', 1, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Arms', 2, 1), (NULL, 'Fury', 2, 1), (NULL, 'Protection', 2, 2);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Beast Mastery', 3, 3), (NULL, 'Marksmanship', 3, 1), (NULL, 'Survival', 3, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Assassination', 4, 1), (NULL, 'Outlaw', 4, 1), (NULL, 'Subtlety', 4, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Discipline', 5, 3), (NULL, 'Holy', 5, 3), (NULL, 'Shadow', 5, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Blood', 6, 2), (NULL, 'Frost', 6, 1), (NULL, 'Unholy', 6, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Elemental', 7, 1), (NULL, 'Enhancement', 7, 1), (NULL, 'Restoration', 7, 3);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Arcane', 8, 1), (NULL, 'Fire', 8, 1), (NULL, 'Frost', 8, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Affliction', 9, 1), (NULL, 'Demonology', 9, 1), (NULL, 'Destruction', 9, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Brewmaster', 10, 2), (NULL, 'Mistweaver', 10, 3), (NULL, 'Windwalker', 10, 1);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Balance', 11, 1), (NULL, 'Feral', 11, 1), (NULL, 'Guardian', 11, 2), (NULL, 'Restoration', 11, 3);
+INSERT INTO `bddartifact`.`specialisation` (`idSpecialisation`, `name`, `codeClass`, `codeRole`) VALUES (NULL, 'Havoc', 12, 1), (NULL, 'Vengeance', 12, 2);
 
 -- Remplissage des armes artifact
 INSERT INTO `artifactweapon` VALUES (NULL,"The Silver Hand", 1,"As one of the titanic watchers, Keeper Tyr bore this weapon in countless battles against the titans' enemies. When one of his fellow keepers, Loken, fell to corruption, Tyr and his allies stole the Discs of Norgannon to investigate the extent of Loken's betrayal. Discovering the theft, Loken sent horrific monsters after Tyr's group, but Tyr sacrificed his life to fight the creatures while his comrades escaped with the discs. His hammer was lost with him somewhere beneath the land now named in his honor: Tirisfal."),

@@ -19,19 +19,19 @@ USE `bddArtifact` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bddArtifact`.`Class` (
   `codeClass` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`codeClass`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `bddArtifact`.`Type`
+-- Table `bddArtifact`.`Role`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bddArtifact`.`Type` (
-  `codeType` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `bddArtifact`.`Role` (
+  `codeRole` INT NOT NULL,
   `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`codeType`),
-  UNIQUE INDEX `codeType_UNIQUE` (`codeType` ASC))
+  PRIMARY KEY (`codeRole`),
+  UNIQUE INDEX `codeType_UNIQUE` (`codeRole` ASC))
 ENGINE = InnoDB;
 
 
@@ -42,19 +42,19 @@ CREATE TABLE IF NOT EXISTS `bddArtifact`.`Specialisation` (
   `idSpecialisation` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `codeClass` INT NOT NULL,
-  `codeType` INT NOT NULL,
+  `codeRole` INT NOT NULL,
   PRIMARY KEY (`idSpecialisation`),
   INDEX `codeClass_idx` (`codeClass` ASC),
-  INDEX `type_idx` (`codeType` ASC),
+  INDEX `type_idx` (`codeRole` ASC),
   CONSTRAINT `codeClass`
     FOREIGN KEY (`codeClass`)
     REFERENCES `bddArtifact`.`Class` (`codeClass`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION,
-  CONSTRAINT `codeType`
-    FOREIGN KEY (`codeType`)
-    REFERENCES `bddArtifact`.`Type` (`codeType`)
-    ON DELETE NO ACTION
+  CONSTRAINT `codeRole`
+    FOREIGN KEY (`codeRole`)
+    REFERENCES `bddArtifact`.`Role` (`codeRole`)
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `bddArtifact`.`ArtifactWeapon` (
   CONSTRAINT `idSpecialisation`
     FOREIGN KEY (`idSpecialisation`)
     REFERENCES `bddArtifact`.`Specialisation` (`idSpecialisation`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -90,38 +90,7 @@ CREATE TABLE IF NOT EXISTS `bddArtifact`.`Appearance` (
   CONSTRAINT `idWeapon`
     FOREIGN KEY (`idWeapon`)
     REFERENCES `bddArtifact`.`ArtifactWeapon` (`idWeapon`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `bddArtifact`.`Color`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bddArtifact`.`Color` (
-  `codeColor` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`codeColor`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `bddArtifact`.`Apprearance_Has_Color`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bddArtifact`.`Apprearance_Has_Color` (
-  `idAppearance` INT NOT NULL,
-  `codeColor` INT NOT NULL,
-  PRIMARY KEY (`idAppearance`, `codeColor`),
-  INDEX `codeColor_idx` (`codeColor` ASC),
-  CONSTRAINT `idAppearance`
-    FOREIGN KEY (`idAppearance`)
-    REFERENCES `bddArtifact`.`Appearance` (`idAppearance`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `codeColor`
-    FOREIGN KEY (`codeColor`)
-    REFERENCES `bddArtifact`.`Color` (`codeColor`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
