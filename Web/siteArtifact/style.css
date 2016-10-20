@@ -108,3 +108,46 @@ div#presWeapon div p{
     justify-content: space-between;
     flex-wrap: nowrap;
 }
+
+body section div{
+    padding-left: 3%;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body section div div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+body section h2{
+    margin-bottom: 0px;
+}
+
+body section div div p{
+    margin: 0px;
+}
+
+body section div div a{
+    margin: 0px;
+    font-style: normal;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+
+body section div div a:hover{
+    color: #ff8d00;
+}
+
+body section div div h3{
+    margin: 0px;
+    font-style: normal;
+    font-size: 2rem;
+    color: #23bd00;
+}

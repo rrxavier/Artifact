@@ -8,9 +8,9 @@
     </head>
     <header>
         <ul id="nav">
-            <li><img src="img/logo.png" alt="Logo" id="logo"></li>
-            <li class="navName"><a href="#"><h2>Classes</h2></a></li>
-            <li class="navName"><a href="#"><h2>Weapons</h2></a></li>
+            <li><a href="index.php"><img src="img/logo.png" alt="Logo" id="logo"></a></li>
+            <li class="navName"><a href="classes.php"><h2>Classes</h2></a></li>
+            <li class="navName"><a href="weapons.php"><h2>Weapons</h2></a></li>
         </ul>
     </header>
     <body>
