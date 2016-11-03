@@ -2,9 +2,12 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Titre de la page</title>
+        <title>Test</title>
+        <link href="Lightbox/dist/css/lightbox.min.css" rel="stylesheet">
+        <link href="Lightbox/dist/css/lightbox.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
     </head>
     <header>
         <ul id="nav">
@@ -14,6 +17,14 @@
         </ul>
     </header>
     <body>
+        <div id="slider">
+            <div><a href="img/doomhammer_1.jpg" data-lightbox="premier" title="Test"><img src="img/doomhammer_1.jpg" alt="First"></a></div>
+            <div><a href="img/ashBringer_1.jpg" data-lightbox="deuxieme"><img src="img/ashBringer_1.jpg" alt="Second"></a></div>
+            <div><a href="img/aSisterSBond_1.jpg" data-lightbox="troisieme"><img src="img/aSisterSBond_1.jpg" alt="Third"></a></div>
+            <div><a href="img/hubrisOfTheDarkTitan_1.jpg" data-lightbox="quatrième"><img src="img/hubrisOfTheDarkTitan_1.jpg" alt="Fourth"></a></div>
+            <div><a href="img/aegwynnSFall_1.jpg" data-lightbox="cinquième"><img src="img/aegwynnSFall_1.jpg" alt="Fifth"></a></div>
+        </div>
+
         <section>
             <p>The burning legion is back and more powerful than ever, it's the reason why the mightiest warriors, 
 mages and even rogues of Azeroth have no other choice than unearth this legendary weapons that once
@@ -42,5 +53,29 @@ contain.</p>
                 </div>
             </div>
         </section>
+
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script src="Lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script>
+            lightbox.option 
+            ({
+                'resizeDuration': 200,
+                'alwaysShowNavOnTouchDevices' : true
+            });
+
+            $(document).ready(function($)
+            {
+                $('#slider').slick({
+                    dots: true,
+                    speed: 300,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    centerMode: true,
+                    fade: true,
+                    adaptiveHeight: true
+                });
+		    });
+        </script>
     </body>
 </html>
