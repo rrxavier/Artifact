@@ -133,7 +133,7 @@ body section div div p{
     margin: 0px;
 }
 
-body section div div a{
+body section div div a.weaponsA{
     margin: 0px;
     font-style: normal;
     font-size: 2rem;
@@ -141,13 +141,24 @@ body section div div a{
 }
 
 
-body section div div a:hover{
+body section div div a.weaponsA:hover{
     color: #ff8d00;
 }
 
-body section div div h3{
+body section div div h3.weaponsH3{
     margin: 0px;
     font-style: normal;
     font-size: 2rem;
     color: #23bd00;
+}
+
+body h1{
+    font-style: normal;
+    font-size: 3rem;
+    color: #23bd00;
+}
+
+body section#pres div div a h3 {
+    margin: auto;
+    color: black;
 }
