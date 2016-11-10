@@ -8,6 +8,10 @@
     </head>
     <?php
 		include_once("function.php");
+        $weapon = sqlSelectClassSpeWeaWhereIdWeapon($_GET['id']);
+        $weapon = $weapon[0];
+
+        $appearences = sqlSelectAppearenceWhereIdWeapon($_GET['id']);
 	?>
     <header>
         <ul id="nav">
@@ -16,7 +20,29 @@
             <li class="navName"><a href="weapons.php"><h2>Weapons</h2></a></li>
         </ul>
     </header>
-    <body>
-        
+    <body id="weapon">
+        <section>
+            <div>
+                <h1><?php echo $weapon[1] ?></h1>
+                <div>
+                    <h1><?php echo $weapon['name'] ?></h1>
+                    <h1><?php echo $weapon[5] ?></h1>
+                </div>
+            </div>
+            <p><?php echo $weapon['story'] ?></p>
+        </section>
+        <section id="skins">
+            <h1>Skins</h1>
+            <div>
+            <?php
+                foreach($appearences as $appearence){
+                    echo '<div>';
+                    echo    '<p>' . $appearence['name'] . '</p>';
+                    echo    '<img src="../imgArtifact/' . $appearence['pictureFileName'] . '" alt="' . $appearence['name'] . '">';
+                    echo '</div>';
+                }
+            ?>
+            </div>
+        </section>
     </body>
 </html>

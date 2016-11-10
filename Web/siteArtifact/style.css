@@ -195,3 +195,43 @@ body table tr td h2{
     margin-bottom: 0px;
     margin-top: 0px;
 }
+
+body#weapon h1{
+    margin: 0px;
+}
+
+body#weapon section div{
+    padding: 0px;
+}
+
+body#weapon section div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body#weapon section#skins div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body#weapon section#skins div div{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body#weapon section#skins div div p{
+    margin: 0px
+}
+
+body#weapon section#skins div div img{
+    width: 100%;
+}
