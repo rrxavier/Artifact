@@ -175,7 +175,7 @@ INSERT INTO `appearance` VALUES (NULL, "Apocalypse", "apocalypse_1.jpg", 18),
 INSERT INTO `appearance` VALUES (NULL, "The Fist of Ra-den", "theFistOfRaDen_1.jpg", 19), 
                                 (NULL, "Stormkeeper", "stormkeeper_1.jpg", 19), 
                                 (NULL, "Earthspeaker", "earthspeaker_1.jpg", 19), 
-                                (NULL, "Fist of the Fallen Shaman", "fistOfTheFallenShaman.jpg", 19);
+                                (NULL, "Fist of the Fallen Shaman", "fistOfTheFallenShaman_1.jpg", 19);
 
 INSERT INTO `appearance` VALUES (NULL, "Doomhammer", "doomhammer_1.jpg", 20), 
                                 (NULL, "Stormbringer", "stormbringer_1.jpg", 20), 
