@@ -38,7 +38,7 @@
                 foreach($appearences as $appearence){
                     echo '<div>';
                     echo    '<p>' . $appearence['name'] . '</p>';
-                    echo    '<img src="../imgArtifact/' . $appearence['pictureFileName'] . '" alt="' . $appearence['name'] . '">';
+                    echo    '<img src="img/artifact/' . $appearence['pictureFileName'] . '" alt="' . $appearence['name'] . '">';
                     echo '</div>';
                 }
             ?>
