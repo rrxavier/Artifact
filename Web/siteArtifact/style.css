@@ -10,16 +10,14 @@ body {
 
 #slider
 {   
-    height: 400px;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 
 #slider div a img
 {
-    height: 340px;
+    height: 200px;
     margin: 0 auto; 
-    margin-top: 30px;
 
     border: solid white 3px;
     border-radius: 3px;
@@ -150,7 +148,7 @@ body section div div p{
     margin: 0px;
 }
 
-body section div div a.weaponsA{
+body section div div a{
     margin: 0px;
     font-style: normal;
     font-size: 2rem;
@@ -158,24 +156,13 @@ body section div div a.weaponsA{
 }
 
 
-body section div div a.weaponsA:hover{
+body section div div a:hover{
     color: #ff8d00;
 }
 
-body section div div h3.weaponsH3{
+body section div div h3{
     margin: 0px;
     font-style: normal;
     font-size: 2rem;
     color: #23bd00;
-}
-
-body h1{
-    font-style: normal;
-    font-size: 3rem;
-    color: #23bd00;
-}
-
-body section#pres div div a h3 {
-    margin: auto;
-    color: black;
 }

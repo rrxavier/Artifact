@@ -26,13 +26,13 @@
                 echo    '<h2>' . $class['name'] . '</h2>';
                 echo    '<div>';
                 echo        '<div>';
-                echo            '<h3 class="weaponsH3" >Specialisations :</h3>';
-                echo            '<h3 class="weaponsH3" >Weapons :</h3>';
+                echo            '<h3>Specialisations :</h3>';
+                echo            '<h3>Weapons :</h3>';
                 echo        '</div>';
                 foreach($req as $row){
                     echo    '<div>';
                     echo        '<p>' . $row['sn'] . '</p>';
-                    echo        '<a class="weaponsA" href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a>';
+                    echo        '<a href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a>';
                     echo    '</div>';
                 }
                 echo    '</div>';

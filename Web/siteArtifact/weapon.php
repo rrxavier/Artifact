@@ -17,6 +17,6 @@
         </ul>
     </header>
     <body>
-        <h1>The Silver Hand</h1>
+        
     </body>
 </html>
