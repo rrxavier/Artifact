@@ -49,7 +49,7 @@ contain.</p>
                 </div>
                 <div id="presWeaponTxt">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis vel sem quis vehicula. Sed eu porta elit, nec commodo nisi. Nulla eu ante rutrum nibh maximus cursus sit amet at arcu. Proin vestibulum turpis sit amet felis egestas, eget cursus eros euismod. Etiam eget blandit est. Etiam vitae egestas ex. Nulla congue sapien a tempor faucibus.</p>
-                    <a href="#"><div><h3>More Here</h3></div></a>
+                    <a href="weapons.php"><div><h3>More Here</h3></div></a>
                 </div>
             </div>
         </section>

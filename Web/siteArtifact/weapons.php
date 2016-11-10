@@ -4,7 +4,29 @@
         <meta charset="utf-8">
         <title>Titre de la page</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            myFunction(".name1",".wea1");
+            myFunction(".name2",".wea2");
+            myFunction(".name3",".wea3");
+            myFunction(".name4",".wea4");
+            myFunction(".name5",".wea5");
+            myFunction(".name6",".wea6");
+            myFunction(".name7",".wea7");
+            myFunction(".name8",".wea8");
+            myFunction(".name9",".wea9");
+            myFunction(".name10",".wea10");
+            myFunction(".name11",".wea11");
+            myFunction(".name12",".wea12");
+
+            function myFunction(name, weapon) {
+                $(document).ready(function(){
+                    $(name).click(function(){
+                       $(weapon).toggle();
+                    });
+                });
+            }
+        </script>
     </head>
     <?php
 		include_once("function.php");
@@ -17,27 +39,23 @@
         </ul>
     </header>
     <body>
+        <table>
         <?php
             $reqClass = sqlSelectClass();
+            $cnt = 1;
             foreach($reqClass as $class){
                 $req = sqlSelectWeaponSpeNameWhereCodeClass($class['codeClass']);
-
-                echo '<section>';
-                echo    '<h2>' . $class['name'] . '</h2>';
-                echo    '<div>';
-                echo        '<div>';
-                echo            '<h3>Specialisations :</h3>';
-                echo            '<h3>Weapons :</h3>';
-                echo        '</div>';
+                echo '<tr>';
+                echo    '<td><h2 class="name' . $cnt . '">' . $class['name'] . '</h2></td>';
+                echo '</tr>';
+                echo '<tr>';
                 foreach($req as $row){
-                    echo    '<div>';
-                    echo        '<p>' . $row['sn'] . '</p>';
-                    echo        '<a href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a>';
-                    echo    '</div>';
+                    echo '<td hidden class="wea' . $cnt . '"><a class="weaponsA" href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a></td>';
                 }
-                echo    '</div>';
-                echo '</section>';
+                echo '</tr>';
+                $cnt++;
             }
         ?>
+        </table>
     </body>
 </html>
