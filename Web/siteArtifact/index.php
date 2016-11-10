@@ -18,11 +18,11 @@
     </header>
     <body>
         <div id="slider">
-            <div><a href="img/doomhammer_1.jpg" data-lightbox="premier" title="Test"><img src="img/doomhammer_1.jpg" alt="First"></a></div>
-            <div><a href="img/ashBringer_1.jpg" data-lightbox="deuxieme"><img src="img/ashBringer_1.jpg" alt="Second"></a></div>
-            <div><a href="img/aSisterSBond_1.jpg" data-lightbox="troisieme"><img src="img/aSisterSBond_1.jpg" alt="Third"></a></div>
-            <div><a href="img/hubrisOfTheDarkTitan_1.jpg" data-lightbox="quatrième"><img src="img/hubrisOfTheDarkTitan_1.jpg" alt="Fourth"></a></div>
-            <div><a href="img/aegwynnSFall_1.jpg" data-lightbox="cinquième"><img src="img/aegwynnSFall_1.jpg" alt="Fifth"></a></div>
+            <div><a href="img/artifact/doomhammer_1.jpg" data-lightbox="premier" title="Test"><img src="img/artifact/doomhammer_1.jpg" alt="First"></a></div>
+            <div><a href="img/artifact/ashBringer_1.jpg" data-lightbox="deuxieme"><img src="img/artifact/ashBringer_1.jpg" alt="Second"></a></div>
+            <div><a href="img/artifact/aSisterSBond_1.jpg" data-lightbox="troisieme"><img src="img/artifact/aSisterSBond_1.jpg" alt="Third"></a></div>
+            <div><a href="img/artifact/hubrisOfTheDarkTitan_1.jpg" data-lightbox="quatrième"><img src="img/artifact/hubrisOfTheDarkTitan_1.jpg" alt="Fourth"></a></div>
+            <div><a href="img/artifact/aegwynnSFall_1.jpg" data-lightbox="cinquième"><img src="img/artifact/aegwynnSFall_1.jpg" alt="Fifth"></a></div>
         </div>
 
         <section>
