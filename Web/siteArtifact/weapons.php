@@ -46,7 +46,7 @@
             foreach($reqClass as $class){
                 $req = sqlSelectWeaponSpeNameWhereCodeClass($class['codeClass']);
                 echo '<tr>';
-                echo    '<td><h2 class="name' . $cnt . '">' . $class['name'] . '</h2></td>';
+                echo    '<td colspan="4"><h2 class="name' . $cnt . '">' . $class['name'] . '\'s Weapons</h2></td>';
                 echo '</tr>';
                 echo '<tr>';
                 foreach($req as $row){

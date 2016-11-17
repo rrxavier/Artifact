@@ -10,7 +10,6 @@
 		include_once("function.php");
         $weapon = sqlSelectClassSpeWeaWhereIdWeapon($_GET['id']);
         $weapon = $weapon[0];
-
         $appearences = sqlSelectAppearenceWhereIdWeapon($_GET['id']);
 	?>
     <header>
@@ -24,12 +23,12 @@
         <section>
             <div>
                 <h1><?php echo $weapon[1] ?></h1>
-                <div>
-                    <h1><?php echo $weapon['name'] ?></h1>
-                    <h1><?php echo $weapon[5] ?></h1>
-                </div>
             </div>
-            <p><?php echo $weapon['story'] ?></p>
+            <div>
+                    <h1>Spec :</h1>
+                    <h1><?php echo $weapon[5] ?></h1>
+            </div>
+            <p style='background-image: url("img/class/emblem/<?php echo $weapon[9]; ?>.png"); background-size: contain; background-repeat: no-repeat; background-position: center center;'><?php echo $weapon['story'] ?></p>
         </section>
         <section id="skins">
             <h1>Skins</h1>
