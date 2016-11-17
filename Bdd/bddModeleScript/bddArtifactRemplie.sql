@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 06 Octobre 2016 à 15:11
+-- Généré le :  Jeu 17 Novembre 2016 à 13:26
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -44,7 +44,7 @@ INSERT INTO `appearance` (`idAppearance`, `name`, `pictureFileName`, `idWeapon`)
 (2, 'Fist of the Fallen Watcher', 'fistOfTheFallenWatcher_1.jpg', 1),
 (3, 'Protector''s Judgment', 'protectorSJudgment_1.jpg', 1),
 (4, 'Gravewarder', 'gravewarder_1.jpg', 1),
-(5, 'Truthguard', 'truthguard_white.jpg', 2),
+(5, 'Truthguard', 'truthguard_1.jpg', 2),
 (6, 'Light of the Titans', 'lightOfTheTitans_1.jpg', 2),
 (7, 'Divine Protector', 'divineProtector_1.jpg', 2),
 (8, 'Dark Keeper''s Ward', 'darkKeeperSWard_1.jpg', 2),
@@ -70,7 +70,7 @@ INSERT INTO `appearance` (`idAppearance`, `name`, `pictureFileName`, `idWeapon`)
 (28, 'Boarshot Cannon', 'boarshotCannon_1.jpg', 7),
 (29, 'Thas''dorah, Legacy of the Windrunners', 'thasDorah_1.jpg', 8),
 (30, 'A Sister''s Bond', 'aSisterSBond_1.jpg', 8),
-(31, 'Phoenix''s Rebirth', 'phoenixSRebirth_1.jpg', 8),
+(31, 'Phoenix''s Rebirth', 'phoenixSRebirthH_1.jpg', 8),
 (32, 'Ranger-General''s Guard', 'rangerGeneralSGuard_1.jpg', 8),
 (33, 'Talonclaw', 'talonclaw_1.jpg', 9),
 (34, 'Eagle''s Rebirth', 'eagleSRebirth_1.jpg', 9),
@@ -115,7 +115,7 @@ INSERT INTO `appearance` (`idAppearance`, `name`, `pictureFileName`, `idWeapon`)
 (73, 'The Fist of Ra-den', 'theFistOfRaDen_1.jpg', 19),
 (74, 'Stormkeeper', 'stormkeeper_1.jpg', 19),
 (75, 'Earthspeaker', 'earthspeaker_1.jpg', 19),
-(76, 'Fist of the Fallen Shaman', 'fistOfTheFallenShaman.jpg', 19),
+(76, 'Fist of the Fallen Shaman', 'fistOfTheFallenShaman_1.jpg', 19),
 (77, 'Doomhammer', 'doomhammer_1.jpg', 20),
 (78, 'Stormbringer', 'stormbringer_1.jpg', 20),
 (79, 'Legion''s Doom', 'legionSDoom_1.jpg', 20),
@@ -130,7 +130,7 @@ INSERT INTO `appearance` (`idAppearance`, `name`, `pictureFileName`, `idWeapon`)
 (88, 'Aegwynn''s Fall', 'aegwynnSFall_1.jpg', 22),
 (89, 'Felo''melorn', 'feloMelorn_1.jpg', 23),
 (90, 'Pride of the Sunstriders', 'prideOfTheSunstriders_1.jpg', 23),
-(91, 'Phoenix''s Rebirth', 'phoenixSRebirth_1.jpg', 23),
+(91, 'Phoenix''s Rebirth', 'phoenixSRebirthM_1.jpg', 23),
 (92, 'Lavaborn Edge', 'lavabornEdge_1.jpg', 23),
 (93, 'Ebonchill', 'ebonchill_1.jpg', 24),
 (94, 'Guardian''s Focus', 'guardianSFocus_1.jpg', 24),
