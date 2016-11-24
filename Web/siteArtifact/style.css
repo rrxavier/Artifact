@@ -242,3 +242,64 @@ body#weapon section#skins div div p{
 body#weapon section#skins div div img{
     width: 100%;
 }
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+section.classes
+{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+figure.class
+{
+    border: solid #252525 5px;
+    background: #252525;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+
+    /* Box Shadow */
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(35,189,0,0.7);
+    -moz-box-shadow: 5px 5px 6px 0px rgba(35,189,0,0.7);
+    box-shadow: 5px 5px 6px 0px rgba(35,189,0,0.7);
+}
+
+figure.class figcaption
+{
+    font-size: 2.4rem;
+    color: #23bd00;
+}
+
+figure.class div
+{
+    display: block;
+    margin: 0 auto;
+    padding: 0 auto;
+    width:230px;
+    height: 77px;
+    text-align: center;
+    line-height: 77px;
+    vertical-align: middle;
+    background-image: url("img/button.png");
+    background-size: cover;
+
+    font-weight: bolder;
+    color: black;
+    font-size: 1.5rem;
+}
+
+figure.class img
+{
+    width: 100%;
+}
