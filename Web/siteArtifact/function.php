@@ -27,6 +27,46 @@ function sqlSelectClass() {
     return $reqArray;
 }
 
+function sqlSelectRoleByIdRole($id) {
+    $myPDO = bddPdo();
+    $req = $myPDO->prepare('SELECT * FROM role WHERE codeRole = :id');
+    $req->bindParam(':id', $id, PDO::PARAM_INT);
+    $req->execute();
+    return $req->fetchAll();
+}
+
+function sqlSelectClassByIdClass($id) {
+    $myPDO = bddPdo();
+    $req = $myPDO->prepare('SELECT * FROM class WHERE codeClass = :id');
+    $req->bindParam(':id', $id, PDO::PARAM_INT);
+    $req->execute();
+    return $req->fetchAll();
+}
+
+function sqlSelectSpecByIdClass($id) {
+    $myPDO = bddPdo();
+    $req = $myPDO->prepare('SELECT * FROM specialisation WHERE codeClass = :id');
+    $req->bindParam(':id', $id, PDO::PARAM_INT);
+    $req->execute();
+    return $req->fetchAll();
+}
+
+function sqlSelectWeaponByIdClass($id) {
+    $myPDO = bddPdo();
+    $req = $myPDO->prepare('SELECT aw.idWeapon, aw.name, aw.idSpecialisation, aw.story FROM artifactweapon AS aw JOIN specialisation ON specialisation.idSpecialisation = aw.idSpecialisation JOIN class ON class.codeClass = specialisation.codeClass WHERE class.codeClass = :id');
+    $req->bindParam(':id', $id, PDO::PARAM_INT);
+    $req->execute();
+    return $req->fetchAll();
+}
+
+function sqlSelectAppearenceByIdClass($id) {
+    $myPDO = bddPdo();
+    $req = $myPDO->prepare('SELECT ap.idAppearance, ap.name, ap.pictureFileName, ap.idWeapon FROM artifactweapon AS aw JOIN specialisation ON specialisation.idSpecialisation = aw.idSpecialisation JOIN class ON class.codeClass = specialisation.codeClass JOIN appearance AS ap ON ap.idWeapon = aw.idWeapon WHERE class.codeClass = :id');
+    $req->bindParam(':id', $id, PDO::PARAM_INT);
+    $req->execute();
+    return $req->fetchAll();
+}
+
 function sqlSelectWeaponSpeNameWhereCodeClass($id) {
     $myPDO = bddPdo();
     $reqArray = $myPDO->query('SELECT class.codeClass AS cc, artifactweapon.name AS an, specialisation.name AS sn, artifactweapon.idWeapon AS ai FROM artifactweapon JOIN specialisation ON specialisation.idSpecialisation = artifactweapon.idSpecialisation JOIN class ON class.codeClass = specialisation.codeClass WHERE class.codeClass = ' . $id . ';')->fetchAll();
