@@ -32,6 +32,9 @@ ul#nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3D3D3D;
 }
 
 a {
@@ -170,8 +173,10 @@ body section div div h3.weaponsH3{
 
 body h1{
     font-style: normal;
-    font-size: 3rem;
-    color: #23bd00;
+    font-size: 5rem;
+    color: #65FF00;
+    margin: 0;
+    text-align: center;
 }
 
 body section#pres div div a h3 {
@@ -201,10 +206,6 @@ body table tr td h2{
 body table tr td h2:hover{
     color: #5100D3;
     cursor: pointer;
-}
-
-body#weapon h1{
-    margin: 0px;
 }
 
 body#weapon section div{
@@ -241,6 +242,29 @@ body#weapon section#skins div div p{
 
 body#weapon section#skins div div img{
     width: 100%;
+}
+
+body section#info div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body section#info div h2{
+    margin: 0;
+}
+
+body section#info p{
+    margin: 0;
+}
+
+body section#info img{
+    margin-bottom: 50px;
+}
+
+body section#info table tr td{
+    border: 1px solid black;
 }
 
 main

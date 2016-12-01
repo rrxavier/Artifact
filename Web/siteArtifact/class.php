@@ -27,10 +27,10 @@
             $cpt = 0;
                 foreach($specs as $spec){
                     $role = sqlSelectRoleByIdRole($spec['codeRole'])[0];
-                    echo '<h2>' . $spec['name'] . '</h2>';
-                    echo '<p>' . $role['name'] . '</p>';
+                    echo '<div><h2>' . $spec['name'] . '</h2>';
+                    echo '<p>&nbsp(' . $role['name'] . ')</p></div>';
                     echo '<p><a href="weapon.php?id=' . $spec['idSpecialisation'] . '">Weapon : ' . $weapons[$cpt]['name'] . '</a></p>';
-                    echo '<img style="width: 50%;" src="img/artifact/' . $appearences[$cpt * 4]['pictureFileName'] . '" alt="">';
+                    echo '<img style="width: 70%;" src="img/artifact/' . $appearences[$cpt * 4]['pictureFileName'] . '" alt="">';
                     $cpt++;
                 }
             ?>

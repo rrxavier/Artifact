@@ -21,17 +21,15 @@
     </header>
     <body id="weapon">
         <section>
+            <h1><?php echo $weapon[1] ?></h1>
             <div>
-                <h1><?php echo $weapon[1] ?></h1>
-            </div>
-            <div>
-                    <h1>Spec :</h1>
-                    <h1><?php echo $weapon[5] ?></h1>
+                    <h2>Spec :</h2>
+                    <h2><?php echo $weapon[5] ?></h2>
             </div>
             <p style='background-image: url("img/class/emblem/<?php echo $weapon[9]; ?>.png"); background-size: contain; background-repeat: no-repeat; background-position: center center;'><?php echo $weapon['story'] ?></p>
         </section>
         <section id="skins">
-            <h1>Skins</h1>
+            <h2>Skins</h2>
             <div>
             <?php
                 foreach($appearences as $appearence){
