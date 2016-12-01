@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
-            myFunction(".name1",".wea1");
+            /*myFunction(".name1",".wea1");
             myFunction(".name2",".wea2");
             myFunction(".name3",".wea3");
             myFunction(".name4",".wea4");
@@ -17,7 +17,7 @@
             myFunction(".name9",".wea9");
             myFunction(".name10",".wea10");
             myFunction(".name11",".wea11");
-            myFunction(".name12",".wea12");
+            myFunction(".name12",".wea12");*/
 
             function myFunction(name, weapon) {
                 $(document).ready(function(){
@@ -38,24 +38,21 @@
             <li class="navName"><a href="weapons.php"><h2>Weapons</h2></a></li>
         </ul>
     </header>
-    <body>
-        <table>
+    <body id="weapons">
         <?php
             $reqClass = sqlSelectClass();
             $cnt = 1;
             foreach($reqClass as $class){
                 $req = sqlSelectWeaponSpeNameWhereCodeClass($class['codeClass']);
-                echo '<tr>';
-                echo    '<td colspan="4"><h2 class="name' . $cnt . '">' . $class['name'] . '\'s Weapons</h2></td>';
-                echo '</tr>';
-                echo '<tr>';
+                echo '<h2 class="name' . $cnt . '">' . $class['name'] . '\'s Weapons</h2>';
+                echo '<div>';
                 foreach($req as $row){
-                    echo '<td hidden class="wea' . $cnt . '"><a class="weaponsA" href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a></td>';
+                    echo '<p hidden class="wea' . $cnt . '"><a class="weaponsA" href="weapon.php?id=' . $row['ai'] . '">' . $row['an'] . '</a></p>';
                 }
-                echo '</tr>';
+                echo '</div>';
+                echo '<script>myFunction(".name' . $cnt . '",".wea' . $cnt . '");</script>';
                 $cnt++;
             }
         ?>
-        </table>
     </body>
 </html>
