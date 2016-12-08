@@ -40,7 +40,7 @@ contain.</p>
                 </div>
                 <div id="presClassTxt">
                     <p>Phasellus dapibus congue enim, eget ullamcorper orci bibendum sit amet. Phasellus dolor neque, luctus eu ultrices vel, auctor non ex. Duis enim elit, mollis et est id, auctor dapibus leo. Curabitur ullamcorper risus neque, non laoreet libero facilisis non. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam nec arcu leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque id lacus vel ex commodo dictum id eget tellus. Praesent a fermentum lectus.</p>
-                    <a href="#"><div><h3>More Here</h3></div></a>
+                    <a href="classes.php"><div><h3>More Here</h3></div></a>
                 </div>
             </div>
             <div id="presWeapon">
