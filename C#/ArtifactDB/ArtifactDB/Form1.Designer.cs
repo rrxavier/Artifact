@@ -58,6 +58,11 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbp5 = new System.Windows.Forms.TabPage();
+            this.roleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appearanceTableAdapter = new ArtifactDB.bddartifactDataSetTableAdapters.appearanceTableAdapter();
             this.tableAdapterManager = new ArtifactDB.bddartifactDataSetTableAdapters.TableAdapterManager();
             this.artifactweaponTableAdapter = new ArtifactDB.bddartifactDataSetTableAdapters.artifactweaponTableAdapter();
@@ -76,12 +81,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.appearanceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.tbp5 = new System.Windows.Forms.TabPage();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roleTableAdapter = new ArtifactDB.bddartifactDataSetTableAdapters.roleTableAdapter();
-            this.roleDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcMain.SuspendLayout();
             this.tbp1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.appearanceDataGridView)).BeginInit();
@@ -96,11 +96,11 @@
             this.tbp4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).BeginInit();
+            this.tbp5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appearanceBindingNavigator)).BeginInit();
             this.appearanceBindingNavigator.SuspendLayout();
-            this.tbp5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcMain
@@ -326,6 +326,47 @@
             this.classBindingSource.DataMember = "class";
             this.classBindingSource.DataSource = this.bddartifactDataSet;
             // 
+            // tbp5
+            // 
+            this.tbp5.Controls.Add(this.roleDataGridView);
+            this.tbp5.Location = new System.Drawing.Point(4, 22);
+            this.tbp5.Name = "tbp5";
+            this.tbp5.Padding = new System.Windows.Forms.Padding(3);
+            this.tbp5.Size = new System.Drawing.Size(678, 423);
+            this.tbp5.TabIndex = 4;
+            this.tbp5.Text = "tabPage1";
+            this.tbp5.UseVisualStyleBackColor = true;
+            // 
+            // roleDataGridView
+            // 
+            this.roleDataGridView.AutoGenerateColumns = false;
+            this.roleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
+            this.roleDataGridView.DataSource = this.roleBindingSource;
+            this.roleDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.roleDataGridView.Name = "roleDataGridView";
+            this.roleDataGridView.Size = new System.Drawing.Size(672, 417);
+            this.roleDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "codeRole";
+            this.dataGridViewTextBoxColumn15.HeaderText = "codeRole";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn16.HeaderText = "name";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // roleBindingSource
+            // 
+            this.roleBindingSource.DataMember = "role";
+            this.roleBindingSource.DataSource = this.bddartifactDataSet;
+            // 
             // appearanceTableAdapter
             // 
             this.appearanceTableAdapter.ClearBeforeFill = true;
@@ -476,50 +517,9 @@
             this.appearanceBindingNavigatorSaveItem.Text = "Save Data";
             this.appearanceBindingNavigatorSaveItem.Click += new System.EventHandler(this.appearanceBindingNavigatorSaveItem_Click);
             // 
-            // tbp5
-            // 
-            this.tbp5.Controls.Add(this.roleDataGridView);
-            this.tbp5.Location = new System.Drawing.Point(4, 22);
-            this.tbp5.Name = "tbp5";
-            this.tbp5.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp5.Size = new System.Drawing.Size(678, 423);
-            this.tbp5.TabIndex = 4;
-            this.tbp5.Text = "tabPage1";
-            this.tbp5.UseVisualStyleBackColor = true;
-            // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataMember = "role";
-            this.roleBindingSource.DataSource = this.bddartifactDataSet;
-            // 
             // roleTableAdapter
             // 
             this.roleTableAdapter.ClearBeforeFill = true;
-            // 
-            // roleDataGridView
-            // 
-            this.roleDataGridView.AutoGenerateColumns = false;
-            this.roleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.roleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
-            this.roleDataGridView.DataSource = this.roleBindingSource;
-            this.roleDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.roleDataGridView.Name = "roleDataGridView";
-            this.roleDataGridView.Size = new System.Drawing.Size(672, 417);
-            this.roleDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "codeRole";
-            this.dataGridViewTextBoxColumn15.HeaderText = "codeRole";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn16.HeaderText = "name";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // frmMain
             // 
@@ -545,12 +545,12 @@
             this.tbp4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.classDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classBindingSource)).EndInit();
+            this.tbp5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.roleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appearanceBindingNavigator)).EndInit();
             this.appearanceBindingNavigator.ResumeLayout(false);
             this.appearanceBindingNavigator.PerformLayout();
-            this.tbp5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roleDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

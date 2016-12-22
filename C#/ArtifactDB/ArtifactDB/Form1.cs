@@ -22,8 +22,6 @@ namespace ArtifactDB
             tbp3.Text = "Specialisation";
             tbp4.Text = "Class";
             tbp5.Text = "Role";
-
-
         }
 
         private void appearanceBindingNavigatorSaveItem_Click(object sender, EventArgs e)
