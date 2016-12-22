@@ -1,0 +1,10 @@
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe.config
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.pdb
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\bin\Debug\MySql.Data.dll
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.csprojResolveAssemblyReference.cache
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.frmMain.resources
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.Properties.Resources.resources
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.csproj.GenerateResource.Cache
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.exe
+C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
