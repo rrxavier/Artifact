@@ -11,3 +11,12 @@ C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
 C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe.config
 C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.exe
 C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe.config
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.exe
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.pdb
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.csprojResolveAssemblyReference.cache
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.frmMain.resources
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.csproj.GenerateResource.Cache

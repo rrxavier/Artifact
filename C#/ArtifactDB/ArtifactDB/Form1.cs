@@ -43,7 +43,6 @@ namespace ArtifactDB
             this.artifactweaponTableAdapter.Fill(this.bddartifactDataSet.artifactweapon);
             // TODO: This line of code loads data into the 'bddartifactDataSet.appearance' table. You can move, or remove it, as needed.
             this.appearanceTableAdapter.Fill(this.bddartifactDataSet.appearance);
-
         }
     }
 }
