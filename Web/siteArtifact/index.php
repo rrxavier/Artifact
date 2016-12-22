@@ -39,7 +39,7 @@ contain.</p>
                     <img src="img/kadghar.jpg" alt="Kad'ghar">
                 </div>
                 <div id="presClassTxt">
-                    <p>Phasellus dapibus congue enim, eget ullamcorper orci bibendum sit amet. Phasellus dolor neque, luctus eu ultrices vel, auctor non ex. Duis enim elit, mollis et est id, auctor dapibus leo. Curabitur ullamcorper risus neque, non laoreet libero facilisis non. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam nec arcu leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque id lacus vel ex commodo dictum id eget tellus. Praesent a fermentum lectus.</p>
+                    <p>From knights in shiny armor to skulking stalkers and cunning spellcasters, each class in World of Warcraft presents unique challenges and gameplay for you to master. What is your calling?</p>
                     <a href="classes.php"><div><h3>More Here</h3></div></a>
                 </div>
             </div>
@@ -48,7 +48,7 @@ contain.</p>
                     <img src="img/doomhammer.png" alt="Doomhammer">
                 </div>
                 <div id="presWeaponTxt">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis vel sem quis vehicula. Sed eu porta elit, nec commodo nisi. Nulla eu ante rutrum nibh maximus cursus sit amet at arcu. Proin vestibulum turpis sit amet felis egestas, eget cursus eros euismod. Etiam eget blandit est. Etiam vitae egestas ex. Nulla congue sapien a tempor faucibus.</p>
+                    <p>Only Azeroth’s most seasoned veterans possess the fortitude to wield artifacts of legend against the Burning Legion. Your myth-forged weapon grows in power as you do, and your choices will change its abilities and the way it looks, sounds, and feels in combat. Fashion your artifact into the perfect instrument of battle, and guide your faction in its most desperate hour.</p>
                     <a href="weapons.php"><div><h3>More Here</h3></div></a>
                 </div>
             </div>
