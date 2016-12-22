@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Artifact</title>
         <link href="Lightbox/dist/css/lightbox.min.css" rel="stylesheet">
         <link href="Lightbox/dist/css/lightbox.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
