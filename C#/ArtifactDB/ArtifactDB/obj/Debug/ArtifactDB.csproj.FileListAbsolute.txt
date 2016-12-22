@@ -8,3 +8,6 @@ C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.Properti
 C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.csproj.GenerateResource.Cache
 C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.exe
 C:\Users\nunesr_info\Desktop\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
+C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\bin\Debug\ArtifactDB.exe.config
+C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.exe
+C:\Users\nunesr_info\Documents\GitHub\Artifact\C#\ArtifactDB\ArtifactDB\obj\Debug\ArtifactDB.pdb
